@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Menu from "./Component/Menu";
+import Menu from "./component/Menu";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(

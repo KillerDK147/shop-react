@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-class Meny extends Component {
+class Menu extends Component {
   state = {};
   render() {
     return (
@@ -27,10 +27,15 @@ class Meny extends Component {
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
+          <Navbar.Collapse className="justify-content-end">
+            <Navbar.Text>
+              Logged in som: <a href="#login">mr.negativ</a>
+            </Navbar.Text>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     );
   }
 }
 
-export default Meny;
+export default Menu;
