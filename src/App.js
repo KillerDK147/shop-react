@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Cards from "./Component/Card";
 import { Col, Container, Row } from "react-bootstrap";
+import React from "react";
 function App() {
   return (
     <div className="App">
@@ -21,7 +22,7 @@ function App() {
       </header>
       <body>
         <h1>hello mr.negativ best programmer</h1>
-        <Container classname="=0">
+        <Container>
           <Row>
             <Col>
               <Cards />
