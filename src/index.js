@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Menu from "./Component/Menu";
+import Cards from "./Component/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
