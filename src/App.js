@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-
+import Cards from "./Component/Card";
 import { Col, Container, Row } from "react-bootstrap";
 import React from "react";
 function App() {
@@ -26,7 +26,7 @@ function App() {
           <Row>
             <Col></Col>
             <Col>
-              <h1>hello mr.negativ best programmer</h1>
+              <Cards />
             </Col>
           </Row>
         </Container>
