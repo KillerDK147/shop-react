@@ -1,5 +1,5 @@
 import { Button, Card } from "react-bootstrap";
-import { Component } from "react";
+import React, { Component } from "react";
 
 class Cards extends Component {
   state = {};
