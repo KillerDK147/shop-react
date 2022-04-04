@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Card from "./Component/card";
+import Cards from "./Component/Card";
 import { Col, Container, Row } from "react-bootstrap";
 function App() {
   return (
@@ -24,10 +24,10 @@ function App() {
         <Container classname="=0">
           <Row>
             <Col>
-              <Card />
+              <Cards />
             </Col>
             <Col>
-              <Card />
+              <Cards />
             </Col>
           </Row>
         </Container>

@@ -1,7 +1,7 @@
 import { Button, Card } from "react-bootstrap";
 import { Component } from "react";
 
-class cards extends Component {
+class Cards extends Component {
   state = {};
   render() {
     return (
@@ -20,4 +20,4 @@ class cards extends Component {
   }
 }
 
-export default cards;
+export default Cards;
