@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
+import Cards from "./component/Card";
 import "./App.css";
-import Cards from "./Component/Card";
 import { Col, Container, Row } from "react-bootstrap";
 import React from "react";
 function App() {
