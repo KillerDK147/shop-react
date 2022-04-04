@@ -1,7 +1,8 @@
 import logo from "./logo.svg";
-import Cards from "./component/Card";
+// import Cards from "./component/Card";
+import CardBord from "./component/CardBordGroup";
 import "./App.css";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import React from "react";
 function App() {
   return (
@@ -23,10 +24,8 @@ function App() {
       <h1>hello mr.negativ best programmer</h1>
       <Container>
         <Row>
-          <Col></Col>
-          <Col>
-            <Cards />
-          </Col>
+          <CardBord />
+          <CardBord />
         </Row>
       </Container>
     </div>

@@ -13,9 +13,11 @@ class Menu extends Component {
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#link">Link</Nav.Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
+                <NavDropdown.Item href="https://matlovescorona.tk">
+                  matlovescorona
+                </NavDropdown.Item>
+                <NavDropdown.Item href="https://matlovescorona.tk/mettemor">
+                  mette soundbord
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">
                   Something
@@ -29,7 +31,7 @@ class Menu extends Component {
           </Navbar.Collapse>
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              Logged in som: <a href="#login">mr.negativ</a>
+              Log in <></>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>
