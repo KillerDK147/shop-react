@@ -20,7 +20,7 @@ function App() {
         </a>
       </header>
       <body>
-        <h1>hello mr.negativ</h1>
+        <h1>hello mr.negativ best programmer</h1>
         <Container classname="=0">
           <Row>
             <Col>
