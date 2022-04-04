@@ -20,17 +20,15 @@ function App() {
           Learn React
         </a>
       </header>
-      <body>
-        <h1>hello mr.negativ best programmer</h1>
-        <Container>
-          <Row>
-            <Col></Col>
-            <Col>
-              <Cards />
-            </Col>
-          </Row>
-        </Container>
-      </body>
+      <h1>hello mr.negativ best programmer</h1>
+      <Container>
+        <Row>
+          <Col></Col>
+          <Col>
+            <Cards />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
