@@ -21,7 +21,7 @@ function App() {
       </header>
       <body>
         <h1>hello mr.negativ</h1>
-        <Container>
+        <Container classname="=0">
           <Row>
             <Col>
               <Card />
