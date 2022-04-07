@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 class Menu extends Component {
   state = {};
   render() {
@@ -10,8 +11,12 @@ class Menu extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
+              <LinkContainer to="/">
+                <Nav.Link>Home</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/farmer">
+                <Nav.Link>Farmer</Nav.Link>
+              </LinkContainer>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="https://matlovescorona.tk">
                   matlovescorona
