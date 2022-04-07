@@ -5,11 +5,13 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Container } from "react-bootstrap";
 import React from "react";
+import Menu from "./component/Menu";
 function App() {
   return (
     <div className="App">
-      <h1>hello mr.negativ best programmer</h1>
       <Container>
+        <h1>hello mr.negativ best programmer</h1>
+        <Menu />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/farmer" element={<Farmer />} />

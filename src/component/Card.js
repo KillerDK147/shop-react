@@ -1,25 +1,26 @@
-import { Button, Card } from "react-bootstrap";
-import React, { Component } from "react";
+import { Button, Card as BsCard } from "react-bootstrap";
+import React from "react";
 
-class Cards extends Component {
-  state = {};
-  render() {
-    return (
-      <div>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="logo192.png" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
+const Card = ({ titel, katergori, besk, sti, antal, enhed, pris }) => {
+  console.log(titel);
+  return (
+    <BsCard>
+      <div className="p-2">
+        <BsCard.Img variant="top" src={sti} />
       </div>
-    );
-  }
-}
+      <BsCard.Body>
+        <BsCard.Title>
+          {titel} - pris: {pris},-
+        </BsCard.Title>
+        <BsCard.Text>{besk}</BsCard.Text>
+        <BsCard.Text>
+          {antal} {enhed}
+        </BsCard.Text>
+        <Button className="btn btn-succses">Resver nu</Button>
+      </BsCard.Body>
+      <BsCard.Header className="small">{katergori}</BsCard.Header>
+    </BsCard>
+  );
+};
 
-export default Cards;
+export default Card;

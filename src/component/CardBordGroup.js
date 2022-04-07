@@ -1,12 +1,29 @@
 import React from "react";
 import Card from "./Card";
 import { CardGroup } from "react-bootstrap";
-const CardBord = () => {
+import Pagination from "./Pagination";
+const CardBord = ({ cards }) => {
+  const [currentPage, setCurrentPage] = React.useState(1);
+  const carsPerPage = 6;
+  const indexOfLastCar = currentPage * carsPerPage;
+  const indexOfFirstCar = indexOfLastCar - carsPerPage;
+  const currentCars = cards.slice(indexOfFirstCar, indexOfLastCar);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
-    <div>
+    <div className="container mt-5">
+      <h1>Produtker</h1>
       <CardGroup>
-        <Card />
+        {currentCars.map((card, key) => (
+          <Card key={key} {...card} />
+        ))}
       </CardGroup>
+      <Pagination
+        postPerPage={carsPerPage}
+        totalPost={cards.length}
+        paginate={paginate}
+        currentPage={currentPage}
+      />
     </div>
   );
 };
