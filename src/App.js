@@ -1,9 +1,7 @@
-import logo from "./logo.svg";
 // import Cards from "./component/Card";
 import Farmer from "./component/routes/Farmer";
 import Home from "./component/routes/Home";
 import { Routes, Route } from "react-router-dom";
-import CardBord from "./component/CardBordGroup";
 import "./App.css";
 import { Container } from "react-bootstrap";
 import React from "react";
