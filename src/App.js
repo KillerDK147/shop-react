@@ -8,8 +8,10 @@ import React from "react";
 function App() {
   return (
     <div className="App">
-      <h1>hello mr.negativ best programmer</h1>
       <Container>
+        <header className="App-header">
+          <h1>hello mr.negativ best programmer</h1>
+        </header>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/farmer" element={<Farmer />} />
