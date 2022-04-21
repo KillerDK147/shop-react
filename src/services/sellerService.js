@@ -1,7 +1,7 @@
 import httpService from "./httpService";
 
-const apiEndpoint = "user/";
-
+const apiEndpoint = "user/";  
+const apiEndpoint2 = "user/reg";
 export async function getSeller() {
   return httpService.get(apiEndpoint);
 }
@@ -14,9 +14,9 @@ export function saveSeller(seller) {
   if (seller._id) {
     const body = { ...seller };
     delete body._id;
-    return httpService.put(apiEndpoint + "reg/" + seller._id, body);
+    return httpService.put(apiEndpoint2 + seller._id, body);
   }
-  return httpService.post(apiEndpoint, seller);
+  return httpService.post(apiEndpoint2, seller);
 }
 
 export async function deleteSeller(id) {
