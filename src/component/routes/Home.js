@@ -1,7 +1,6 @@
 import React from "react";
 import CardBord from "../CardBordGroup";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import http from "../../services/httpService";
 
 const Home = () => {

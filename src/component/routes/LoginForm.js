@@ -1,7 +1,7 @@
-import { Form, Button, Toast } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import React, { useState } from "react";
 import { login } from "../../services/authService";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 const LoginForm = () => {
   let [Account, setAccount] = useState({
     Email: "",
