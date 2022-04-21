@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import Logout from "./routes/logoutForm";
 class Menu extends Component {
   state = {};
   render() {
@@ -18,15 +19,11 @@ class Menu extends Component {
                 <Nav.Link>Farmer</Nav.Link>
               </LinkContainer>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="https://matlovescorona.tk">
-                  matlovescorona
+                <NavDropdown.Item href="/logout">Logout</NavDropdown.Item>
+                <NavDropdown.Item href="/deleteUser">
+                  Delete User
                 </NavDropdown.Item>
-                <NavDropdown.Item href="https://matlovescorona.tk/mettemor">
-                  mette soundbord
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
+                <NavDropdown.Item href="/user">Create User</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
                   Separated link
@@ -35,9 +32,9 @@ class Menu extends Component {
             </Nav>
           </Navbar.Collapse>
           <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-              Log in <></>
-            </Navbar.Text>
+            <LinkContainer to="/login">
+              <Nav.Link>Login</Nav.Link>
+            </LinkContainer>
           </Navbar.Collapse>
         </Container>
       </Navbar>
