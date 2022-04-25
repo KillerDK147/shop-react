@@ -32,7 +32,6 @@ const LoginForm = () => {
     } catch (err) {
       console.log(err);
     }
-    await login(Account.Email, Account.password);
     console.log("submitted");
   };
 
