@@ -4,6 +4,7 @@ import Home from "./component/routes/Home";
 import LoginForm from "./component/routes/LoginForm";
 import Logout from "./component/routes/logoutForm";
 import Seller from "./component/routes/Seller";
+import ProdForm from "./component/routes/ProdForm";
 import DeleteUser from "./component/routes/DeleteUser";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/logout" element={<Logout />} />
           <Route path="/user" element={<Seller />} />
           <Route path="/deleteUser" element={<DeleteUser />} />
+          <Route path="/prodForm" element={<ProdForm />} />
         </Routes>
       </Container>
     </div>
