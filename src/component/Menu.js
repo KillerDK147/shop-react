@@ -24,9 +24,7 @@ class Menu extends Component {
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/user">Create User</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
+                <NavDropdown.Item href="/prodForm">prodForm</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
