@@ -2,6 +2,7 @@ import { Form, Button, DropdownButton, Dropdown } from "react-bootstrap";
 import { getCurrentUser } from "../services/authService";
 import { useState } from "react";
 import { saveProd } from "../services/prodService";
+import { toast } from "react-toastify";
 const Prod = () => {
   const [Prod, setProd] = useState({
     katergori: "grøntsager",
@@ -23,8 +24,10 @@ const Prod = () => {
       e.preventDefault();
       console.log(Prod);
       await saveProd(Prod);
+      toast.success("Produktet er gemt");
       console.log("saved");
     } catch (ex) {
+      toast.error("Produktet kunne ikke gemmes");
       console.log(ex.response.data);
     }
   };

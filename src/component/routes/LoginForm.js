@@ -21,9 +21,14 @@ const LoginForm = () => {
     //     console.log(err);
     //   });
     try {
-      await login(Account.Email, Account.password);
-      window.location.href = "/";
-      toast.success("Login Success");
+      const acc = await login(Account.Email, Account.password);
+      if (acc) {
+        toast.success("Login Success");
+        window.location = "/";
+      }else{
+        toast.error("Login Fail");
+        console.log("Login Fail");
+      }
     } catch (err) {
       console.log(err);
     }
