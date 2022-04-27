@@ -11,7 +11,6 @@ const DeleteUser = () => {
     <div>
       <h1>Delete User</h1>
       <Button
-        text
         onClick={() => {
           const User = getCurrentUser();
           if (!User) {

@@ -1,4 +1,4 @@
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, DropdownButton, Dropdown } from "react-bootstrap";
 import { useState } from "react";
 import { saveSeller } from "../../services/sellerService";
 import { toast } from "react-toastify";
@@ -15,8 +15,10 @@ const Seller = () => {
     console.log(Account);
     const user = await saveSeller(Account);
     if (user) {
-      window.location.href = "/home";
-      toast.error("Login Failed");
+      window.location.href = "/";
+      toast.success("Seller Created");
+    } else {
+      toast.error("Seller not Created");
     }
   };
 
@@ -24,6 +26,12 @@ const Seller = () => {
     setAccount({
       ...Account,
       [e.target.name]: e.target.value,
+    });
+  };
+  let handleSelect = (e) => {
+    setAccount({
+      ...Account,
+      acces: e,
     });
   };
   return (
@@ -56,9 +64,19 @@ const Seller = () => {
             type="password"
             placeholder="Password"
             name="password"
+            autoComplete="New-Password"
             value={Account.password}
             onChange={handlerChange}
           />
+          <DropdownButton
+            id="dropdown-basic-button"
+            title={Account.acces}
+            onSelect={handleSelect}
+            className="mt-3"
+          >
+            <Dropdown.Item eventKey="client">Brugere</Dropdown.Item>
+            <Dropdown.Item eventKey="seller">Seller</Dropdown.Item>
+          </DropdownButton>
         </Form.Group>
 
         <Button variant="primary" type="submit">

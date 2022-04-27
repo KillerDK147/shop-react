@@ -12,12 +12,19 @@ import { Container } from "react-bootstrap";
 import React from "react";
 import Menu from "./component/Menu";
 import { ToastContainer } from "react-toastify";
+import { useState, useEffect } from "react";
+import { getCurrentUser } from "./services/authService";
 function App() {
+  const [User, setUser] = useState({});
+  useEffect(() => {
+    setUser(getCurrentUser());
+  }, []);
+
   return (
     <div className="App">
       <Container>
         <h1>hello mr.negativ best programmer</h1>
-        <Menu />
+        <Menu user={User} />
         <ToastContainer />
         <Routes>
           <Route path="/" element={<Home />} />

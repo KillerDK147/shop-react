@@ -23,9 +23,10 @@ const LoginForm = () => {
     try {
       const acc = await login(Account.Email, Account.password);
       if (acc) {
+        console.log(acc);
         toast.success("Login Success");
         window.location = "/";
-      }else{
+      } else {
         toast.error("Login Fail");
         console.log("Login Fail");
       }
@@ -41,7 +42,9 @@ const LoginForm = () => {
       [e.target.name]: e.target.value,
     });
   };
-
+  function goToRegister() {
+    window.location = "/user";
+  }
   return (
     <div className="container mt-5">
       <Form onSubmit={handerSubmit}>
@@ -50,6 +53,7 @@ const LoginForm = () => {
           <Form.Control
             type="email"
             placeholder="Enter email"
+            autoComplete="email"
             name="Email"
             value={Account.email}
             onChange={handlerChange}
@@ -64,6 +68,7 @@ const LoginForm = () => {
           <Form.Control
             type="password"
             placeholder="Password"
+            autoComplete="current-password"
             name="password"
             value={Account.password}
             onChange={handlerChange}
@@ -76,6 +81,17 @@ const LoginForm = () => {
           Submit
         </Button>
       </Form>
+      <div className="mt-5">
+        <h4> har du ikke en konto?</h4>
+        <Button
+          variant="primary"
+          type="submit"
+          className="text-white"
+          onClick={goToRegister}
+        >
+          Registrer dig
+        </Button>
+      </div>
     </div>
   );
 };

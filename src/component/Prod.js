@@ -31,7 +31,6 @@ const Prod = () => {
       console.log(ex.response.data);
     }
   };
-
   let handlerChange = (e) => {
     setProd({
       ...Prod,

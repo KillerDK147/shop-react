@@ -9,3 +9,11 @@ export function saveProd(prod) {
   }
   return httpService.post(apiEndpoint, prod);
 }
+
+export async function getProd() {
+  return httpService.get(apiEndpoint);
+}
+
+export async function getProdById(id) {
+  return httpService.get(apiEndpoint + id);
+}
